@@ -55,11 +55,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton btn = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        final FloatingActionButton btn = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn.setEnabled(false);
                 updateList();
+                btn.setEnabled(true);
             }
         });
     }
